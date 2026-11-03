@@ -119,7 +119,13 @@ const tools = computed<ToolCategory[]>(() => [
         <div>
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
+  </div>
+  <router-view />
+  </template>
+</MenuLayout>
+</template>
 
+<style scoped lang="less">
 
 .footer {
   text-align: center;
