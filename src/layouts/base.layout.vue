@@ -128,23 +128,7 @@ const tools = computed<ToolCategory[]>(() => [
             target="_blank"
             class="support-button"
             :bordered="false"
-            @click="() => tracker.trackEvent({ eventName: 'Support button clicked' })"
-          >
-            {{ $t('home.buyMeACoffee') }}
-            <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />
-          </c-button>
-        </c-tooltip>
-      </div>
-      <slot />
-    </template>
-  </MenuLayout>
-</template>
-
-<style lang="less" scoped>
-// ::v-deep(.n-layout-scroll-container) {
-//     @percent: 4%;
-//     @position: 25px;
-//     @size: 50px;
+            @click="() => tracker.trackEvent({ eventName: 'Support button clicked' })
 //     @color: #eeeeee25;
 //     background-image: radial-gradient(@color @percent, transparent @percent),
 //         radial-gradient(@color @percent, transparent @percent);
